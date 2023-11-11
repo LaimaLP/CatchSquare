@@ -13,9 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     squareDOM.style.left = `${randomLeft}px`;
   };
 
+
   changePosition();
   generateHexColor();
+  shoot();
   setInterval(generateHexColor, 1000);
   setInterval(changePosition, 1000);
 
 });
+
+
+
+document.getElementById("square").addEventListener("click", shoot);
+function shoot(){
+    document.getElementById("square").style.borderRadius= "50px";
+
+    setTimeout(() => {
+        document.getElementById("square").style.borderRadius= "0";
+      }, 400);
+}

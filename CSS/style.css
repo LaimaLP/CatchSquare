@@ -43,3 +43,7 @@ span{
     top: auto;
 }
 
+.square:hover{
+/* border-radius: 50%; */
+cursor: crosshair;
+}
