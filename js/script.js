@@ -23,13 +23,21 @@ generateHexColor();
   };
 
   changePosition();
-  setInterval(changePosition, 2000);
+  // setInterval(changePosition, 2000);
 
 });
 
+function playerNameInput() {
+  let nameDOM = document.getElementById("playerName");
+  let inputField = document.getElementById("nameInput");
 
-const nameDOM = document.getElementById("playerName");
+  document.querySelector(".nameBtn").addEventListener("click", () => {
+      nameDOM.innerText = inputField.value;
+  });
+}
 
+// Call the function to set up the event listener
+playerNameInput();
 
 let playerCountDOM = document.getElementById("playerCount")
 let opponentCountDOM = document.getElementById("opponentCount")
