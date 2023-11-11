@@ -18,7 +18,7 @@ section{
        align-content: center;
     justify-content: center;
     width: 100%;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 110px);
     background: linear-gradient(to right, rgb(177, 244, 250), rgb(120, 97, 249))
     
 }
@@ -61,4 +61,21 @@ cursor: crosshair;
     font-size: 4rem;
     padding-top: 5px;
   
+}
+.playersNameBox{
+    font-size: 2rem;
+    padding-right: 70px;
+    border-right: 4px groove grey;
+    line-height: 2em;
+ 
+}
+.livePoints{
+    margin-left: 5px;
+    color: blue;
+}
+#opponent{
+    border-right: none;
+    padding-left: 50px;
+    border-left: 4px groove grey;
+    line-height: 2em;
 }

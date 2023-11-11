@@ -8,7 +8,7 @@
         href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
@@ -21,15 +21,21 @@
 
 <body>
     <header class="main-header">
-        <input type="Player">
-        <div id= "countDown" class="countDown">30</div>
+        <div id = "playerName" class="playersNameBox"> Name: <span id="playerCount" class="livePoints"> 0</span></div>
 
         <div class="logo">Catch a square <span style='font-size:50px;'>&#129312;</span> </div>
+        <div id= "countDown" class="countDown">30</div>
 
-        <input type="opponent">
+        <div id = "opponentName" class="playersNameBox"> Opponent: <span id="opponentCount" class="livePoints"> 0</span></div>
+
 
     </header>
-
+<form>
+    <lebel class='lebel' for="name"> Your name: </lebel>
+    <input id="nameInput" class="nameInput" type="text" name="name">
+  
+    <button class="nameBtn">Submit</button>
+</form>
     <section>
         <div class="result-container">
 
