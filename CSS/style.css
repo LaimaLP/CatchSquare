@@ -37,6 +37,7 @@ section{
     position: absolute;
     top: 0;
     left: 0; 
+    display: block;
 }
 span{
     position: absolute;
@@ -47,4 +48,17 @@ span{
     box-shadow: 2px 2px 10px rgb(112, 87, 87);
 border: 4px outset rgb(225, 210, 210);
 cursor: crosshair;
+}
+
+.countDown{
+    color: antiquewhite;
+    border-radius: 50%;
+    border: 6px groove rgb(10, 10, 97);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: black;
+    font-size: 4rem;
+    padding-top: 5px;
+  
 }

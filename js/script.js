@@ -32,3 +32,31 @@ function shoot(){
         document.getElementById("square").style.borderRadius= "0";
       }, 400);
 }
+
+
+
+  let time = 30;
+
+  const countDownDOM = document.getElementById('countDown');
+
+  
+  function countDown() {
+    
+    countDownDOM.innerText = time;
+
+    
+    if (time === 0) {
+      clearInterval(timerInterval);
+      alert("Uuups, time out! ");
+    } else {
+      time--;
+    }
+  }
+
+  const timerInterval = setInterval(countDown, 1000);
+
+
+
+
+
+  
