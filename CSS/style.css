@@ -22,9 +22,25 @@ section{
     background: linear-gradient(to right, rgb(177, 244, 250), rgb(120, 97, 249))
     
 }
+.result-container{
+    display: flex;
+    flex-direction: row;
+    gap:10px
+}
+.playerGameInfo{
+margin-top: 50px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    display: none;
+    /* background-color: blue; */
+}
+.showPlayers{
+    display: inline-block;
+}
 
 .area-container{
-    margin-top: 20px;
+    /* margin-top: 10px; */
     height: 80vh;
     width: 800px;
     background-color: azure;
@@ -53,29 +69,83 @@ cursor: crosshair;
 .countDown{
     color: antiquewhite;
     border-radius: 50%;
-    border: 6px groove rgb(10, 10, 97);
+    border: 4px inset rgb(10, 10, 97);
     width: 100px;
     height: 100px;
     text-align: center;
     color: black;
     font-size: 4rem;
     padding-top: 5px;
+    box-shadow: 0px 0px 10px;
+
   
 }
 .playersNameBox{
     font-size: 2rem;
     padding-right: 70px;
-    border-right: 4px groove grey;
+ font-weight: bold;
     line-height: 2em;
  
 }
 .livePoints{
     margin-left: 5px;
-    color: blue;
+    color: rgb(69, 69, 75);
 }
 #opponent{
     border-right: none;
     padding-left: 50px;
     border-left: 4px groove grey;
     line-height: 2em;
+}
+form{
+    background-color: rgba(108, 187, 187);
+    position: absolute;
+    width: 400px;
+    height: 300px;
+   inset: 35%;
+    z-index: 1;
+    /* border: 2px outset rgb(85, 136, 195); */
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px grey;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(58, 55, 55);
+}
+.notShow{
+    display: none;
+}
+.nameInput{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 2px 20px;
+}
+.nameBtn{
+font-size: 1rem;
+border-radius: 8px;
+padding: 3px 10px;
+cursor: pointer;
+margin-top: 15px;
+}
+
+.startBtn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(54, 147, 98);
+    box-shadow: 0px 0px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    border: 0.5px inset rgb(177, 244, 250);
+}
+.startBtn:hover{
+    background-color: rgba(54, 147, 97, 0.495);
+    
 }

@@ -21,29 +21,38 @@
 
 <body>
     <header class="main-header">
-        <div id = "playerName" class="playersNameBox"> Name: <span id="playerCount" class="livePoints"> 0</span></div>
-
+        <button class="startBtn">START</button>
         <div class="logo">Catch a square <span style='font-size:50px;'>&#129312;</span> </div>
-        <div id= "countDown" class="countDown">30</div>
+            <div id="countDown" class="countDown">30</div>
 
-        <div id = "opponentName" class="playersNameBox"> Opponent: <span id="opponentCount" class="livePoints"> 0</span></div>
 
 
     </header>
-<form>
-    <lebel class='lebel' for="name"> Your name: </lebel>
-    <input id="nameInput" class="nameInput" type="text" name="name">
-  
-    <button class="nameBtn">Submit</button>
-</form>
+    <form>
+        <div style='font-size:50px;'>Hello, wanna play? &#129312</div>
+        <lebel class='lebel' for="name"> Your name: </lebel>
+        <input id="nameInput" class="nameInput" type="text" name="name" required>
+        <button class="nameBtn">Submit</button>
+    </form>
+    
     <section>
         <div class="result-container">
-
+            <aside class="playerGameInfo">
+                <div id="playerName" class="playersNameBox"> Name</div>
+                <div> My points: <span id="playerCount" class="livePoints"> 0</span>
+                </div>
+            </aside>
             <div class="area-container">
                 <div id="square" class="square">
                     <span style='font-size:30px;'>&#129413;</span>
                 </div>
             </div>
+            <aside class="playerGameInfo">
+                <div id="opponentName" class="playersNameBox"> Opponent</div>
+                <div> Points: <span id="opponentCount" class="livePoints"> 0</span>
+                </div>
+            </aside>
+
         </div>
         <!-- <span style='font-size:50px;'>&#128336;</span> -->
     </section>
