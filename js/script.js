@@ -7,6 +7,8 @@ let playerCountDOM = document.getElementById("playerCount");
 let opponentCountDOM = document.getElementById("opponentCount");
 const countDownDOM = document.getElementById("countDown");
 const playerGameInfoDOM = document.querySelectorAll(".playerGameInfo")
+const headerDOM = document.querySelector(".main-header");
+
 
 let playerCount = 0;
 let opponentCount = 0;
@@ -22,12 +24,15 @@ const inputField = document.getElementById("nameInput");
 const nameDOM = document.getElementById("playerName");
 
 
+
   nameDOM.textContent = inputField.value[0].toUpperCase() + inputField.value.slice(1);
   formDOM.classList.add("notShow");
-
+  startBtnDOM.style.visibility="visible"
+ 
   playerGameInfoDOM.forEach(element => {
     element.classList.add("showPlayers");
   });
+ 
 });
 
 

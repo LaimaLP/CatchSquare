@@ -12,6 +12,8 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
         sans-serif;
         height: 100vh;
+    
+     
 }
 section{
     display: flex;
@@ -20,12 +22,13 @@ section{
     width: 100%;
     height: calc(100vh - 110px);
     background: linear-gradient(to right, rgb(177, 244, 250), rgb(120, 97, 249))
-    
+      /* display: none; */
 }
 .result-container{
     display: flex;
     flex-direction: row;
-    gap:10px
+    gap: 10px;
+  
 }
 .playerGameInfo{
 margin-top: 50px;
@@ -51,8 +54,8 @@ margin-top: 50px;
     width: 50px;
     background-color: rgba(130, 68, 68, 0.7);
     position: absolute;
-    top: 0;
-    left: 0; 
+    top: 200px;
+    left: 400px; 
     display: block;
 }
 span{
@@ -97,6 +100,15 @@ cursor: crosshair;
     border-left: 4px groove grey;
     line-height: 2em;
 }
+/* .form-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 42, 42, 0.397);
+    z-index: 1;
+    display: absolute;
+    inset: 0;
+} */
+
 form{
     background-color: rgba(108, 187, 187);
     position: absolute;
@@ -144,6 +156,7 @@ margin-top: 15px;
     border: none;
     cursor: pointer;
     border: 0.5px inset rgb(177, 244, 250);
+    visibility: hidden;
 }
 .startBtn:hover{
     background-color: rgba(54, 147, 97, 0.495);
