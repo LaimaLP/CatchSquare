@@ -111,10 +111,10 @@ cursor: crosshair;
 
 form{
     background-color: rgba(108, 187, 187);
-    position: absolute;
-    width: 400px;
-    height: 300px;
-   inset: 35%;
+    position: fixed;
+    width: 500px;
+    height: 400px;
+   inset: 30%;
     z-index: 1;
     /* border: 2px outset rgb(85, 136, 195); */
     border-radius: 20px;
