@@ -1,20 +1,20 @@
 const formDOM = document.querySelector("form");
 const nameBtnDOM = document.querySelector(".nameBtn");
 const squareDOM = document.getElementById("square");
-const sectionDOM = document.querySelector('section');
-const startBtnDOM = document.querySelector(".startBtn");
+const sectionDOM = document.querySelector("section");
+const startBtnDOM = document.getElementById("startBtn");
 let playerCountDOM = document.getElementById("playerCount");
 let opponentCountDOM = document.getElementById("opponentCount");
 const countDownDOM = document.getElementById("countDown");
 const playerGameInfoDOM = document.querySelectorAll(".playerGameInfo");
-const headerDOM = document.querySelector(".main-header");
-// const playerRoundsCountDOM=document.getElementById(".playerRoundsCount");
-// const opponentRoundsCountDOM =document.getElementById(".opponentRoundsCount");
+const endGameBoardDOM = document.getElementById("endGameBoard");
+const restartDOM = document.getElementById("restart");
+const resultDOM = document.getElementById("result");
 
 let playerCount = 0;
 let opponentCount = 0;
 let isHit = false;
-let rounds = 10;
+let rounds = 5;
 let currentRound = 0;
 let time = 30;
 let timerInterval;
@@ -25,14 +25,14 @@ nameBtnDOM.addEventListener("click", function (event) {
   event.preventDefault();
   updatePlayerName();
   squareDOM.style.display = "none";
-  sectionDOM.style.display="flex";
-
+  sectionDOM.style.display = "flex";
 });
 
 startBtnDOM.addEventListener("click", function () {
   startGame();
-  squareDOM.style.display = "block"
-  startBtnDOM.style.visibility = "hidden";
+  squareDOM.style.display = "block";
+  startBtnDOM.style.opacity = "0";
+  countDownDOM.style.opacity = "1";
 });
 
 squareDOM.addEventListener("click", function () {
@@ -43,9 +43,11 @@ function updatePlayerName() {
   const inputField = document.getElementById("nameInput");
   const nameDOM = document.getElementById("playerName");
 
-  nameDOM.textContent = inputField.value[0].toUpperCase() + inputField.value.slice(1);
+  nameDOM.textContent =
+    inputField.value[0].toUpperCase() + inputField.value.slice(1);
   formDOM.classList.add("notShow");
-  startBtnDOM.style.visibility = "visible";
+  startBtnDOM.style.opacity = "1";
+  countDownDOM.style.opacity = "1";
 
   playerGameInfoDOM.forEach((element) => {
     element.classList.add("showPlayers");
@@ -74,7 +76,7 @@ function startRound() {
   time = 30;
   updateCountDownDisplay();
   updateScoreDisplay();
-  timerInterval = setInterval(updateGame, 2000);
+  timerInterval = setInterval(updateGame, 1000);
 }
 
 function updateGame() {
@@ -92,15 +94,25 @@ function countDown() {
   }
 }
 
+
 function endRound() {
   clearInterval(timerInterval);
-  alert(`Round ${currentRound} completed! Your score: ${playerCount}:${opponentCount}`);
-
-  startNextRound();
+  let winner = "Ohh, round won by Opponent";
+  if(playerCount > opponentCount){
+     winner = "Congrats, you won!"
+  }
+  resultDOM.innerText = `Round completed. \n Score: ${playerCount}:${opponentCount}. \n ${winner} `;
+  sectionDOM.style.display = "none";
+  endGameBoardDOM.style.visibility = "visible";
+  showCongrats()
 }
 
-
-
+restartDOM.addEventListener("click", function (event) {
+  event.preventDefault();
+  endGameBoardDOM.style.visibility = "hidden";
+  sectionDOM.style.display = "flex";
+  startNextRound();
+});
 
 function endGame() {
   clearInterval(timerInterval);
@@ -113,10 +125,8 @@ function updateCountDownDisplay() {
 
 function updateScoreDisplay() {
   playerCountDOM.textContent = playerCount;
-  
   opponentCountDOM.innerText = opponentCount;
 }
-
 
 function changePosition() {
   if (!isHit) {
@@ -144,12 +154,3 @@ function generateHexColor() {
   const randomColor = Math.random().toString(16).slice(2, 8);
   squareDOM.style.backgroundColor = `#${randomColor}`;
 }
-
-
-
-
-
-
-
-
-
