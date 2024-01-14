@@ -18,8 +18,6 @@ let rounds = 5;
 let currentRound = 0;
 let time = 30;
 let timerInterval;
-// let playerRoundsCount = 0;
-// let opponentRoundsCount = 0;
 
 nameBtnDOM.addEventListener("click", function (event) {
   event.preventDefault();
@@ -94,14 +92,13 @@ function countDown() {
   }
 }
 
-
 function endRound() {
   clearInterval(timerInterval);
-  let winner = "Ohh, round won by Opponent";
+  let winner = "Ohh, you lose";
   if(playerCount > opponentCount){
      winner = "Congrats, you won!"
   }
-  resultDOM.innerText = `Round completed. \n Score: ${playerCount}:${opponentCount}. \n ${winner} `;
+  resultDOM.innerText = `Round completed. \n\n Score: ${playerCount}:${opponentCount}. \n\n ${winner} `;
   sectionDOM.style.display = "none";
   endGameBoardDOM.style.visibility = "visible";
   showCongrats()
