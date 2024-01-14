@@ -187,7 +187,8 @@ form {
     border: none;
     cursor: pointer;
     border: 0.5px inset rgb(88, 170, 177);
-    opacity: 0;
+    /* opacity: 0; */
+    visibility:hidden;
     position: relative;
     /* Needed for absolute positioning of pseudo-element */
 }

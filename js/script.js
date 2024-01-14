@@ -29,7 +29,7 @@ nameBtnDOM.addEventListener("click", function (event) {
 startBtnDOM.addEventListener("click", function () {
   startGame();
   squareDOM.style.display = "block";
-  startBtnDOM.style.opacity = "0";
+  startBtnDOM.style.visibility = "hidden";
   countDownDOM.style.opacity = "1";
 });
 
@@ -44,7 +44,7 @@ function updatePlayerName() {
   nameDOM.textContent =
     inputField.value[0].toUpperCase() + inputField.value.slice(1);
   formDOM.classList.add("notShow");
-  startBtnDOM.style.opacity = "1";
+  startBtnDOM.style.visibility = "visible";
   countDownDOM.style.opacity = "1";
 
   playerGameInfoDOM.forEach((element) => {
