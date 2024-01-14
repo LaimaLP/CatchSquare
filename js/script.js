@@ -71,10 +71,10 @@ function startNextRound() {
 }
 
 function startRound() {
-  time = 200;
+  time = 30;
   updateCountDownDisplay();
   updateScoreDisplay();
-  timerInterval = setInterval(updateGame, 200);
+  timerInterval = setInterval(updateGame, 1000);
 }
 
 function updateGame() {
