@@ -71,10 +71,10 @@ function startNextRound() {
 }
 
 function startRound() {
-  time = 30;
+  time = 200;
   updateCountDownDisplay();
   updateScoreDisplay();
-  timerInterval = setInterval(updateGame, 1000);
+  timerInterval = setInterval(updateGame, 200);
 }
 
 function updateGame() {
@@ -94,7 +94,7 @@ function countDown() {
 
 function endRound() {
   clearInterval(timerInterval);
-  let winner = "Ohh, you lose";
+  let winner = "Ohh, you lost";
   if(playerCount > opponentCount){
      winner = "Congrats, you won!"
   }
@@ -132,7 +132,7 @@ function changePosition() {
   isHit = false;
   opponentCountDOM.innerText = opponentCount;
 
-  const randomTop = Math.floor(Math.random() * 400);
+  const randomTop = Math.floor(Math.random() * 530);
   const randomLeft = Math.floor(Math.random() * 750);
   squareDOM.style.top = `${randomTop}px`;
   squareDOM.style.left = `${randomLeft}px`;

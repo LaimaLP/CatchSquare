@@ -7,8 +7,6 @@ body, body * {
 
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', */
-        sans-serif;
     height: 100vh;
     background: linear-gradient(to right, rgb(177, 244, 250), rgb(120, 97, 249))
 }
@@ -35,7 +33,6 @@ section {
     text-align: center;
     font-size: 1.5rem;
     display: none;
-    /* background-color: blue; */
 }
 
 .showPlayers {
@@ -43,13 +40,12 @@ section {
 }
 
 .area-container {
-    height: 80vh;
     width: 800px;
+    height: 580px;
     background-color: azure;
     position: relative;
     border-radius: 20px;
     box-shadow: 1px 1px 30px grey;
-
 }
 
 #square {
@@ -120,6 +116,9 @@ span {
 form {
     background-color: rgb(59, 186, 186);
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 700px;
     height: 400px;
     z-index: 1;
@@ -128,17 +127,14 @@ form {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    justify-content: space-between;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     text-align: center;
     color: rgb(58, 55, 55);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding:15px;
+    padding: 15px;
 }
+
 
 .nameInputField {
     display: flex;
@@ -187,13 +183,10 @@ form {
     border: none;
     cursor: pointer;
     border: 0.5px inset rgb(88, 170, 177);
-    /* opacity: 0; */
     visibility:hidden;
     position: relative;
-    /* Needed for absolute positioning of pseudo-element */
 }
 
-/* Shining Animation */
 #startBtn::before {
     content: "";
     position: absolute;
@@ -266,7 +259,7 @@ form {
 }
 
 #logo {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 #endGameBoard {
