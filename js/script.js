@@ -98,7 +98,7 @@ function endRound() {
   if(playerCount > opponentCount){
      winner = "Congrats, you won!"
   }
-  resultDOM.innerText = `Round completed. \n\n Score: ${playerCount}:${opponentCount}. \n\n ${winner} `;
+  resultDOM.innerText = `Round completed. \n\n You shot ${playerCount} birds, the opponent ${opponentCount}. \n\n ${winner} `;
   sectionDOM.style.display = "none";
   endGameBoardDOM.style.visibility = "visible";
   showCongrats()
