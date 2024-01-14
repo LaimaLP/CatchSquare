@@ -4,8 +4,8 @@
 <head>
 
 
-    <link rel="shortcut icon" href="./favicon.ico" <link rel="apple-touch-icon" sizes="180x180"
-        href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./favicon.ico" >
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
@@ -15,26 +15,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="i8TARC2iimOYbCOBo0HqbNK9bcg7I6vGBvjzgfTa5L0" />
-    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/style.css">
     <title>Catch a square</title>
 </head>
 
 <body>
 
-
-
-    <header class="main-header">
-        <button class="startBtn">START</button>
-        <div class="logo">Catch a square <span style='font-size:50px;'>&#129312;</span> </div>
+   <div class="header">
+        <button class="startBtn"> <i class="fa-solid fa-play"></i> START</button>
+        <div class="logo">Catch a square &#129312 </div>
         <div id="countDown" class="countDown">30</div>
-    </header>
+    </div>
     
     <form>
-        <div style='font-size:50px;'>Hello, wanna play? &#129312</div>
-        <lebel class='lebel' for="name"> Your name: </lebel>
+        <div style='font-size:50px;'> &#129312</div>
+        <div>The clock is ticking, and the birds are on the wing – get ready for an exhilarating hunt!</div>
+        <div class="nameInputField">
+        <lebel class='lebel' for="name"> What's your name? </lebel>
         <input id="nameInput" class="nameInput" type="text" name="name" required>
+    </div>
         <button class="nameBtn">Submit</button>
+    
     </form>
 
     <section>

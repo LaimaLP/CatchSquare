@@ -1,6 +1,7 @@
 const formDOM = document.querySelector("form");
 const nameBtnDOM = document.querySelector(".nameBtn");
 const squareDOM = document.getElementById("square");
+const sectionDOM = document.querySelector('section');
 const startBtnDOM = document.querySelector(".startBtn");
 let playerCountDOM = document.getElementById("playerCount");
 let opponentCountDOM = document.getElementById("opponentCount");
@@ -24,12 +25,14 @@ nameBtnDOM.addEventListener("click", function (event) {
   event.preventDefault();
   updatePlayerName();
   squareDOM.style.display = "none";
+  sectionDOM.style.display="flex";
 
 });
 
 startBtnDOM.addEventListener("click", function () {
   startGame();
   squareDOM.style.display = "block"
+  startBtnDOM.style.visibility = "hidden";
 });
 
 squareDOM.addEventListener("click", function () {
@@ -71,7 +74,7 @@ function startRound() {
   time = 30;
   updateCountDownDisplay();
   updateScoreDisplay();
-  timerInterval = setInterval(updateGame, 1000);
+  timerInterval = setInterval(updateGame, 2000);
 }
 
 function updateGame() {
