@@ -1,5 +1,5 @@
 
-![Alt text](image.png)
+![Game start](image-1.png)
 
 🌟 About
 This project is for educational porpuses only. 
