@@ -1,4 +1,5 @@
-body, body * {
+body,
+body * {
     margin: 0;
     padding: 0;
     vertical-align: top;
@@ -6,30 +7,50 @@ body, body * {
 }
 
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
     height: 100vh;
-    background: linear-gradient(to right, rgb(177, 244, 250), rgb(120, 97, 249))
+    background-image: url(/img/forest5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header {
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2.7px);
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:60px;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 section {
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: calc(100vh - 110px);
-    background: linear-gradient(to right, rgb(177, 244, 250), rgb(120, 97, 249));
     display: none;
 }
 
 .result-container {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
 
 }
 
 .playerGameInfo {
-    margin-top: 50px;
     width: 200px;
+    height: 150px;
     text-align: center;
     font-size: 1.5rem;
     display: none;
@@ -37,12 +58,18 @@ section {
 
 .showPlayers {
     display: inline-block;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 .area-container {
     width: 800px;
     height: 580px;
-    background-color: azure;
+    background-color: rgba(240, 255, 255, 0.9);
     position: relative;
     border-radius: 20px;
     box-shadow: 1px 1px 30px grey;
@@ -75,18 +102,17 @@ span {
     border: 4px inset rgb(10, 10, 97);
     width: 100px;
     height: 100px;
-    display:flex;
+    display: flex;
     justify-content: center;
     color: black;
     font-size: 4rem;
     padding-top: 5px;
     box-shadow: 0px 0px 10px;
     opacity: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* font-family:fantasy; */
-    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#countDown span{
+
+#countDown span {
     margin: auto;
     margin-top: 0.1%;
 
@@ -177,13 +203,14 @@ form {
 #startBtn {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: rgb(54, 147, 98);
+    font-weight: 600;
+    background-color: rgb(4, 161, 14);
     box-shadow: 0px 0px 10px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     border: 0.5px inset rgb(88, 170, 177);
-    visibility:hidden;
+    visibility: hidden;
     position: relative;
 }
 
@@ -194,11 +221,11 @@ form {
     left: -10%;
     width: 120%;
     height: 120%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(115, 9, 9, 0.3);
     border-radius: inherit;
     opacity: 0;
     animation: shining 1.5s infinite ease-in-out;
-  }
+}
 
 @keyframes shining {
     0% {
@@ -247,16 +274,7 @@ form {
     animation: shining 1.5s infinite ease-in-out;
 }
 
-.header {
-    width: 800px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* gap:250px; */
-    justify-content: space-between;
-    padding: 10px 0;
-}
+
 
 #logo {
     font-size: 50px;

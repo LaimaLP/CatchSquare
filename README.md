@@ -1,5 +1,5 @@
 
-![Game start](image-1.png)
+![Game start](game.png)
 
 🌟 About
 This project is for educational porpuses only. 
