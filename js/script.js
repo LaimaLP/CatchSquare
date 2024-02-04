@@ -132,7 +132,7 @@ function changePosition() {
   isHit = false;
   opponentCountDOM.innerText = opponentCount;
 
-  const randomTop = Math.floor(Math.random() * 530);
+  const randomTop = Math.floor(Math.random() * 480);
   const randomLeft = Math.floor(Math.random() * 750);
   squareDOM.style.top = `${randomTop}px`;
   squareDOM.style.left = `${randomLeft}px`;
