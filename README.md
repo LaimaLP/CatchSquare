@@ -1,5 +1,5 @@
 
-![Game start](game.png)
+![Game start](game2.png)
 
 🌟 About
 This project is for learning purposes and desktop use only.. 
