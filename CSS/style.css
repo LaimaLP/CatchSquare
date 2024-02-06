@@ -4,6 +4,8 @@ body * {
     padding: 0;
     vertical-align: top;
     box-sizing: border-box;
+    background-image: url('img/forest5.png');
+
 }
 
 body {
